@@ -1,13 +1,13 @@
 {
 	"plugins": [
 		{
-			"name": "My plugin",
-			"className": "MyPlugin",
+			"name": "ColorPicker",
+			"className": "ColorPicker",
 			"description": "Adds text to the editor.",
-			"path": "src/myplugin.js",
+			"path": "src/colorpicker.js",
 			"uiComponents": [
 				{
-					"name": "myButton",
+					"name": "colorPicker",
 					"type": "Button",
 					"iconPath": "theme/icons/ckeditor.svg"
 				}

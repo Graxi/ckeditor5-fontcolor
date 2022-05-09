@@ -1,0 +1,12 @@
+/*.ck.ck-color-grid__tile--custom,
+.ck.ck-reset-color {
+  min-width: unset;
+  min-height: unset;
+  width: 18px;
+  height: 18px;
+}
+
+.ck.ck-color-grid--custom {
+  padding: 6px;
+  grid-gap: 3px;
+}*/
