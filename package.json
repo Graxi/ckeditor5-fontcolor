@@ -1,5 +1,5 @@
 {
-  "name": "@graxi/ckeditor5-colorpicker",
+  "name": "@graxi/ckeditor5-fontcolor",
   "version": "0.0.1",
   "description": "A plugin for CKEditor 5.",
   "keywords": [
@@ -67,18 +67,5 @@
     "translations:collect": "ckeditor5-package-tools translations:collect",
     "translations:download": "ckeditor5-package-tools translations:download",
     "translations:upload": "ckeditor5-package-tools translations:upload"
-  },
-  "lint-staged": {
-    "**/*.js": [
-      "eslint --quiet"
-    ],
-    "**/*.css": [
-      "stylelint --quiet --allow-empty-input"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   }
 }

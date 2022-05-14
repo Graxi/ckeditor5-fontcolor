@@ -23,14 +23,14 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
 import Code from '@ckeditor/ckeditor5-basic-styles/src/code';
 
-import ColorPicker from '../src/colorpicker';
+import FontColor from '../src/fontcolor';
 
 /* global document, window */
 
 ClassicEditor
 	.create( document.querySelector( '#editor' ), {
 		plugins: [
-			ColorPicker,
+			FontColor,
 			Essentials,
 			Autoformat,
 			BlockQuote,
@@ -54,7 +54,7 @@ ClassicEditor
 			Base64UploadAdapter
 		],
 		toolbar: [
-			'colorPicker',
+			'fontColor',
 			'|',
 			'heading',
 			'|',
@@ -86,6 +86,35 @@ ClassicEditor
 				'tableRow',
 				'mergeTableCells'
 			]
+		},
+		fontColor: {
+			colors: [
+			  {
+			    color: '#61BD6D'
+			  },
+			  {
+			    color: '#1ABC9C'
+			  },
+			  {
+			    color: '#54ACD2'
+			  },
+			  {
+			    color: '#2C82C9'
+			  },
+			  {
+			    color: '#9365B8'
+			  },
+			  {
+			    color: '#475577'
+			  },
+			  {
+			    color: '#CCCCCC'
+			  },
+			  {
+			    color: '#41A85F'
+			  }
+			],
+			columns: 5
 		}
 	} )
 	.then( editor => {

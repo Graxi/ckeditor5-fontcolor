@@ -1,0 +1,28 @@
+.ck.ck-color-input-container {
+  padding: 0 6px 6px;
+  margin-top: 6px;
+}
+
+.ck.ck-color-input-container .ck.ck-labeled-field-view {
+  display: inline-block;
+  width: 80px;
+}
+
+.ck.ck-color-input-container .ck.ck-input-text {
+  height: 26px;
+  min-height: unset;
+  min-width: unset;
+  width: 80px;
+}
+.ck.ck-color-input-container .ck.ck-input_focused {
+  box-shadow: none;
+}
+
+.ck.ck-color-input-container .ck.ck-button {
+  background: none;
+  cursor: pointer;
+  color: green;
+}
+.ck.ck-color-input-container .ck.ck-button:hover {
+  background: initial;
+}
