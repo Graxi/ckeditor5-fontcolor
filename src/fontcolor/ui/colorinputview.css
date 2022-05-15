@@ -7,6 +7,10 @@
   display: inline-block;
   width: 80px;
 }
+/*error status*/
+.ck.ck-color-input-container .ck.ck-labeled-field-view.ck-error .ck.ck-input-text {
+  border-color: red;
+}
 
 .ck.ck-color-input-container .ck.ck-input-text {
   height: 26px;
@@ -22,7 +26,9 @@
   background: none;
   cursor: pointer;
   color: green;
-}
-.ck.ck-color-input-container .ck.ck-button:hover {
-  background: initial;
+  width: 26px;
+  height: 26px;
+  min-width: unset;
+  min-height: unset;
+  margin-left: 5px;
 }

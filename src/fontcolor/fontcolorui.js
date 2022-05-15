@@ -54,8 +54,7 @@ export default class FontColorUI extends Plugin {
       })
       dropdownView.panelView.children.add(colorInputView);
 
-      dropdownView.buttonView.on('execute', () => {
-        //
+      dropdownView.buttonView.on('execute', (evt, data) => {
         editor.editing.view.focus();
       })
 

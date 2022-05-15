@@ -12,13 +12,16 @@ import './colorinputview.css';
 import hashIcon from './hash.svg';
 import checkIcon from './check.svg';
 
+const HEX_COLOR_REGEX = new RegExp("^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$");
+
 // ColorInputView consists of color label, color input and a button
 export default class ColorInputView extends View {
   constructor(locale, { color }) {
     super(locale);
 
     this.set('selectedColor');
-    this._inputColor = '';
+
+    this.set('inputColor'); // color in input field
 
     this.items = this.createCollection();
 
@@ -47,7 +50,7 @@ export default class ColorInputView extends View {
   _appendColorInput(locale, color) {
     const labeledFieldView = new LabeledFieldView(locale, createLabeledInputText);
     labeledFieldView.set({
-      label: 'Hex Color',
+      label: 'Hex Color'
     })
     // for input
     const fieldView = labeledFieldView.fieldView;
@@ -70,18 +73,25 @@ export default class ColorInputView extends View {
 
     // listen to input event
     labeledFieldView.on('input', (eventInfo, inputEvent) => {
-      this._inputColor = `#${inputEvent.target.value}`;
+      const hexColor = `#${inputEvent.target.value}`;
+      const isHexColorValid = HEX_COLOR_REGEX.test(hexColor);
+      labeledFieldView.set({
+        class: isHexColorValid ? '' : 'ck-error'
+      })
+      this.set('inputColor', isHexColorValid ? hexColor : undefined);
     })
   }
 
   _appendEnterButton(locale) {
     const buttonView = new ButtonView(locale);
     buttonView.set({
-      icon: checkIcon
+      icon: checkIcon,
     })
+    buttonView.bind('isEnabled').to(this, 'inputColor'); // if inputColor is undefined, disable the button
 
     buttonView.on('execute', () => {
-      this.fire('execute', { value: this._inputColor })
+      if (!this.inputColor) return;
+      this.fire('execute', { value: this.inputColor });
     })
 
     this.items.add(buttonView);

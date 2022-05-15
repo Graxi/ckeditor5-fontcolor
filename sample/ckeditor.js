@@ -82,46 +82,46 @@ ClassicEditor
 		},
 		table: {
 			contentToolbar: [
-				'tableColumn',
-				'tableRow',
-				'mergeTableCells'
+			'tableColumn',
+			'tableRow',
+			'mergeTableCells'
 			]
 		},
 		fontColor: {
 			colors: [
-			  {
-			    color: '#61BD6D'
-			  },
-			  {
-			    color: '#1ABC9C'
-			  },
-			  {
-			    color: '#54ACD2'
-			  },
-			  {
-			    color: '#2C82C9'
-			  },
-			  {
-			    color: '#9365B8'
-			  },
-			  {
-			    color: '#475577'
-			  },
-			  {
-			    color: '#CCCCCC'
-			  },
-			  {
-			    color: '#41A85F'
-			  }
+			{
+				color: '#61BD6D'
+			},
+			{
+				color: '#1ABC9C'
+			},
+			{
+				color: '#54ACD2'
+			},
+			{
+				color: '#2C82C9'
+			},
+			{
+				color: '#9365B8'
+			},
+			{
+				color: '#475577'
+			},
+			{
+				color: '#CCCCCC'
+			},
+			{
+				color: '#41A85F'
+			}
 			],
 			columns: 5
 		}
 	} )
-	.then( editor => {
-		window.editor = editor;
-		CKEditorInspector.attach( editor );
-		window.console.log( 'CKEditor 5 is ready.', editor );
-	} )
-	.catch( err => {
-		window.console.error( err.stack );
-	} );
+.then( editor => {
+	window.editor = editor;
+	CKEditorInspector.attach( editor );
+	window.console.log( 'CKEditor 5 is ready.', editor );
+} )
+.catch( err => {
+	window.console.error( err.stack );
+} );
